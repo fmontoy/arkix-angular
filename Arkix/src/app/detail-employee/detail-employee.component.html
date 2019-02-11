@@ -1,0 +1,7 @@
+<div *ngIf="employee" class="details">
+  <h1>{{employee.employee_name|uppercase}}</h1>
+  <hr>
+  <h2>Edad: {{employee.employee_age}}</h2>
+  <h2>Salario: {{employee.employee_salary}}</h2>
+  <button class="btn btn-danger" (click)="deleteEmployee()">Eliminar Empleado</button>
+</div>

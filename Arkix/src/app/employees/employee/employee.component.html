@@ -1,0 +1,10 @@
+<mat-card class="card">
+  <mat-card-title>{{employee.employee_name}}</mat-card-title>
+  <hr>
+  <mat-card-content>
+    <p>Edad: {{employee.employee_age}}</p>
+    <p>Salario: ${{employee.employee_salary| number}}</p>
+    
+  </mat-card-content>
+  <button  (click)="goDetail()" class="glyphicon glyphicon-info-sign garbageButton"></button>
+</mat-card>

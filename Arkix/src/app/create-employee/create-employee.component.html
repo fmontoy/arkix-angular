@@ -1,0 +1,28 @@
+<h1 style="text-align:center">Ingresar un nuevo empleado</h1>
+<hr>
+<div class="Form">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <label>Nombre:</label>
+    <input type="text" 
+          class="form-control" 
+          placeholder="Nombre completo" 
+          ngModel
+          name="name"
+          required>
+    <label>Edad:</label>
+    <input type="number" 
+          class="form-control" 
+          placeholder="0"
+          ngModel
+          name="age"
+          required>
+    <label>Salario:</label>
+    <input type="number" 
+          class="form-control" 
+          placeholder="0"
+          ngModel
+          name="salary"
+          required><br>
+    <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Crear Empleado</button>
+  </form>
+</div>

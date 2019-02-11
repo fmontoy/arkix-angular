@@ -1,0 +1,14 @@
+.card {
+    width: 200px;
+    margin:5px;
+   
+}
+.card  mat-card-title{
+    color:#03757b;
+}
+
+.garbageButton{
+    background-color:transparent;
+    border:none;
+    text-decoration: none;
+}

@@ -1,0 +1,15 @@
+.employeeContainer{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+h1{
+    color:#543d10;
+}
+
+.employees{
+    text-align: center;
+}

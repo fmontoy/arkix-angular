@@ -1,0 +1,22 @@
+<div class="employees">
+  <h1>Empleados Arkix</h1>
+  <mat-radio-group class="example-radio-group" [(ngModel)]="propName">
+      <mat-radio-button style="margin:2%;" class="example-radio-button" *ngFor="let option of options" [value]="option.value">
+        {{option.name}}
+      </mat-radio-button>
+  </mat-radio-group><br>
+  <input placeholder="Filtrar" type="text" [(ngModel)]="searchTerm">
+  <hr>
+  <div class="container">
+      <div *ngIf="employees">
+        <div class="employeeContainer">
+        <app-employee *ngFor="let employee of employees|filter:searchTerm:propName" [employee]="employee"></app-employee>
+          </div>
+      </div>
+      
+  </div>
+  <div *ngIf="!employees">
+  <h3>Cargando empleados</h3>
+  <mat-progress-spinner  style="margin:0 auto;" mode="indeterminate"></mat-progress-spinner>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+input{
+    width:fit-content;
+}
+
+input.ng-valid{
+    border-color: darkgreen;
+}
+
+.Form{
+    display: flex;
+    justify-content: center;
+}
