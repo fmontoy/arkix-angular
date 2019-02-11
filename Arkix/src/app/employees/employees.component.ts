@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../models/employee.model';
 import { EmployeeService } from '../services/employee.service';
-import { Form, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-employees',
@@ -21,7 +20,7 @@ export class EmployeesComponent implements OnInit {
     this.employee.get('employees')
       .subscribe(
         (response)=>{
-          this.employees = response.json() 
+          this.employees = response.json().slice(0,20);
         },
         (error)=>{
           console.log(error.json());

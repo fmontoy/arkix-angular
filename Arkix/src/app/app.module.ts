@@ -16,9 +16,10 @@ import {MatCardModule} from '@angular/material/card';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
-import { MatDialogModule, MatButtonModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatDialogModule, MatButtonModule, MatProgressSpinnerModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { DialogModalComponent } from './detail-employee/dialog-modal/dialog-modal.component';
 import { AlertModalComponent } from './alert-modal/alert-modal.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 const appRoutes:Routes =[
   { path:'', component:EmployeesComponent },
@@ -47,8 +48,8 @@ const appRoutes:Routes =[
     MatProgressSpinnerModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
-    
+    RouterModule.forRoot(appRoutes),
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
