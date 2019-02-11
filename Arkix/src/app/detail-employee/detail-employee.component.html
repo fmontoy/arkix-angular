@@ -5,7 +5,3 @@
   <h2>Salario: ${{employee.employee_salary|number}}</h2>
   <button class="btn btn-danger" (click)="deleteEmployee()">Eliminar Empleado</button>
 </div>
-<div *ngIf="!employee">
-  <h3 style="text-align: center">Cargando</h3>
-  <mat-progress-spinner  style="margin:0 auto;" mode="indeterminate"></mat-progress-spinner>
-</div>
