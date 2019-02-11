@@ -17,7 +17,6 @@ export class EmployeeComponent implements OnInit {
   }
 
   goDetail(){
-    console.log('employee' + this.employee.id)
     this.router.navigate(['employee/' + this.employee.id])
   }
 

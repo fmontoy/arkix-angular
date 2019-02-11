@@ -4,6 +4,7 @@ import { EmployeeService } from '../services/employee.service';
 import { Employee } from '../models/employee.model';
 import { DialogModalComponent } from './dialog-modal/dialog-modal.component';
 import { MatDialog } from '@angular/material';
+import { AlertModalComponent } from '../alert-modal/alert-modal.component';
 
 @Component({
   selector: 'app-detail-employee',
@@ -36,9 +37,11 @@ export class DetailEmployeeComponent implements OnInit {
         this.employeeService.delete(this.employee.id)
           .subscribe(
             (response)=>{
-              console.log(response);
-              alert('Empleado eliminado exitosamente!')
               this.routs.navigate(['']);
+              this.dialog.open(AlertModalComponent, {
+                width: '250px',
+                data: {title:'Empleado eliminado', subtitle:'El empleado ha sido eliminado exitosamente'}
+              });
 
             },
             (error)=>{

@@ -20,7 +20,6 @@ export class EmployeesComponent implements OnInit {
       .subscribe(
         (response)=>{
           this.employees = response.json() 
-          console.log(this.employees);
         },
         (error)=>{
           console.log(error.json());

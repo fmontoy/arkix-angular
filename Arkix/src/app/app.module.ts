@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
 import { MatDialogModule, MatButtonModule, MatProgressSpinnerModule } from '@angular/material';
 import { DialogModalComponent } from './detail-employee/dialog-modal/dialog-modal.component';
+import { AlertModalComponent } from './alert-modal/alert-modal.component';
 
 const appRoutes:Routes =[
   { path:'', component:EmployeesComponent },
@@ -34,6 +35,7 @@ const appRoutes:Routes =[
     FilterPipe,
     CreateEmployeeComponent,
     DialogModalComponent,
+    AlertModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +52,7 @@ const appRoutes:Routes =[
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[DialogModalComponent]
+  entryComponents:[DialogModalComponent,
+                   AlertModalComponent]
 })
 export class AppModule { }
