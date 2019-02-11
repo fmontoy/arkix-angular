@@ -11,7 +11,9 @@ import { Form, NgForm } from '@angular/forms';
 export class EmployeesComponent implements OnInit {                      
   employees:Employee[]                                                                                                                                                                                                                                                        
   searchTerm='';
-  options = [{name:'Nombre', value:'employee_name'},{name:'Salario',value:'employee_salary'},{name:'Edad',value:'employee_age'}]
+  options = [{name:'Nombre', value:'employee_name'},
+             {name:'Salario',value:'employee_salary'},
+             {name:'Edad',value:'employee_age'}]
   propName='employee_name';
   constructor(public employee:EmployeeService) {}
 
