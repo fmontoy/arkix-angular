@@ -20,7 +20,7 @@ export class EmployeesComponent implements OnInit {
     this.employee.get('employees')
       .subscribe(
         (response)=>{
-          this.employees = response.json().slice(0,20);
+          this.employees = response.json()
         },
         (error)=>{
           console.log(error.json());
